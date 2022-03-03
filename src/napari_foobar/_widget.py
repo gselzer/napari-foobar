@@ -9,7 +9,7 @@ Replace code below according to your needs.
 from typing import Optional
 import jpype
 from qtpy.QtWidgets import QWidget, QHBoxLayout, QPushButton
-from magicgui import magic_factory
+from magicgui import magic_factory, magicgui
 
 
 class ExampleQWidget(QWidget):
@@ -43,7 +43,7 @@ def example_magic_widget2(img_layer: Optional[str] = None):
 
 @magic_factory()
 def example_magic_widget3(img_layer: Optional[str] = None):
-    raise ValueError("No, don't choose that one!")
+    magicgui(function=[]) # Should fail
 
 # Uses the `autogenerate: true` flag in the plugin manifest
 # to indicate it should be wrapped as a magicgui to autogenerate
