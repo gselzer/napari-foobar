@@ -7,7 +7,7 @@ see: https://napari.org/plugins/stable/guides.html#widgets
 Replace code below according to your needs.
 """
 from typing import Optional
-import imagej
+import scyjava
 from qtpy.QtWidgets import QWidget, QHBoxLayout, QPushButton
 from magicgui import magic_factory
 
@@ -32,9 +32,8 @@ class ExampleQWidget(QWidget):
 
 
 @magic_factory
-def example_magic_widget(foo: "napari.layers.Image"):
-    ij = imagej.init()
-    ij.py.from_java(img_layer)
+def example_magic_widget(img_layer: "napari.layers.Image"):
+    scyjava.start_jvm()
     print(f"you have selected {img_layer}")
 
 @magic_factory(img_layer = {"choices": ['a', 'b'], "max": None})
