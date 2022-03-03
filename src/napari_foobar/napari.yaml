@@ -20,6 +20,9 @@ contributions:
     - id: napari-foobar.make_magic_widget
       python_name: napari_foobar._widget:example_magic_widget
       title: Make example magic widget
+    - id: napari-foobar.make_magic_widget2
+      python_name: napari_foobar._widget:example_magic_widget2
+      title: Make example magic widget 2
     - id: napari-foobar.make_func_widget
       python_name: napari_foobar._widget:example_function_widget
       title: Make example function widget 
@@ -43,6 +46,8 @@ contributions:
       display_name: Example QWidget
     - command: napari-foobar.make_magic_widget
       display_name: Example Magic Widget
+    - command: napari-foobar.make_magic_widget2
+      display_name: Example Magic Widget 2
     - command: napari-foobar.make_func_widget
       autogenerate: true
       display_name: Example Function Widget 
