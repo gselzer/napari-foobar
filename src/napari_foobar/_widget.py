@@ -41,6 +41,9 @@ def example_magic_widget(img_layer: "napari.layers.Image"):
 def example_magic_widget2(img_layer: Optional[str] = None):
     print(f"you have selected {img_layer}")
 
+@magic_factory()
+def example_magic_widget3(img_layer: Optional[str] = None):
+    raise ValueError("No, don't choose that one!")
 
 # Uses the `autogenerate: true` flag in the plugin manifest
 # to indicate it should be wrapped as a magicgui to autogenerate
